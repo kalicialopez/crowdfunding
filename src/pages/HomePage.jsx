@@ -8,12 +8,13 @@ function HomePage() {
     const [projectList, setProjectList] = useState([]);
     
     useEffect(() => {
-        fetch(`${import.meta.env.VITE_API_URL}projects`)
+        fetch(`${import.meta.env.VITE_API_URL}projects/`)
         .then((results) => {
             return results.json();
         })
         .then((data) => {
             setProjectList(data);
+            console.log(data);
         });
     }, []);
 
