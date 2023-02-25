@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 
 // Components
 import ProjectCard from "../components/ProjectCard/ProjectCard";
+import Footer from "../components/Footer/Footer";
 
 function HomePage() {
     //State
