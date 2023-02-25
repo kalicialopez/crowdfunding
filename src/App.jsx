@@ -3,8 +3,9 @@ import React, { useState } from "react";
 
 // Pages
 import HomePage from "./pages/HomePage";
-import ProjectPage from "./pages/ProjectPage";
 import LoginPage from "./pages/LoginPage";
+import ProjectPage from "./pages/ProjectPage";
+
 
 // Components
 import Nav from "./components/Nav/Nav";
@@ -41,3 +42,8 @@ function App() {
   return <RouterProvider router={router} />;
 }
 export default App;
+
+
+
+
+

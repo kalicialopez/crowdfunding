@@ -1,17 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate, useParams, useOutletContext } from "react-router-dom";
 
-function PledgeForm() {
+function PledgeForm(props) {
+    const { projectId } = props
+
     const authToken = window.localStorage.getItem("token")
     const [loggedIn] = useOutletContext();
     const [pledges, setPledges] = useState({
         // from JSON Raw Body in Deployed (default values)
         // this is what is returned at the bottom
-        "amount": null,
+        "pledge_amount": null,
         "comment": "",
-        "anonymous": false,
-        "project": null,        
+        "anonymous": false       
     });
+
 
     // enables redirect
     const navigate = useNavigate();
@@ -51,7 +53,7 @@ function PledgeForm() {
                     "Content-Type": "application/json",
                     "Authorization": `Token ${authToken}`,
                 },
-                body: JSON.stringify(pledges),
+                body: JSON.stringify({ project:projectId, ...pledges }),
                 }
                 );
                 if (!response.ok) {
@@ -74,10 +76,10 @@ function PledgeForm() {
             <div>
             <form onSubmit={handleSubmit}>
                 <div>
-                <label htmlFor="amount">Amount:</label>
+                <label htmlFor="pledge_amount">Amount:</label>
                 <input
                     type="number"
-                    id="amount"
+                    id="pledge_amount"
                     placeholder="Enter amount"
                     onChange={handleChange}
                 />
@@ -97,15 +99,6 @@ function PledgeForm() {
                     type="checkbox"
                     id="anonymous" 
                     onChange={handleChange} 
-                />
-                </div>
-                <div>
-                <label htmlFor="project">Project:</label>
-                <input
-                    type="text"
-                    id="project"
-                    placeholder="needs to be auto-filled with current project"
-                    onChange={handleChange}
                 />
                 </div>
                 <button type="submit">Pledge</button>
