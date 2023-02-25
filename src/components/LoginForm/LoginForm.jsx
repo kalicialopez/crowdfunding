@@ -41,19 +41,31 @@ const postData = async () => {
     return response.json();
   };
 
-const handleSubmit = async (event) => {
-	event.preventDefault();
-	if (credentials.username && credentials.password) {
-        // calling the post data function that we wrote, and will return json
+// const handleSubmit = async (event) => {
+// 	event.preventDefault();
+// 	if (credentials.username && credentials.password) {
+//         // calling the post data function that we wrote, and will return json
+//         const { token } = await postData();
+//         window.localStorage.setItem("token", token);
+//           setLoggedIn(true);
+//         navigate("./");
+//         // check if value of token doesn't = undefined. If it doesn't, store the token and change the state to setLoggedIn = true. Otherwise, don't store the token and setLoggedIn = false.
+//       } else {
+//         setLoggedIn(false);
+//       }
+//     }
+
+    const handleSubmit = async (event) => {
+      event.preventDefault();
+      if (credentials.username && credentials.password) {
         const { token } = await postData();
-        window.localStorage.setItem("token", token);
+        if (token !== undefined) {
+          window.localStorage.setItem("token", token);
           setLoggedIn(true);
-        navigate("./");
-        // check if value of token doesn't = undefined. If it doesn't, store the token and change the state to setLoggedIn = true. Otherwise, don't store the token and setLoggedIn = false.
-      } else {
-        setLoggedIn(false);
-      }
-    }
+          navigate("/");
+        } else setLoggedIn(false);
+    }};
+
 
     return (
       <form onSubmit={handleSubmit}>
@@ -81,5 +93,5 @@ const handleSubmit = async (event) => {
       </form>
     );
     }
-  
+    
   export default LoginForm;

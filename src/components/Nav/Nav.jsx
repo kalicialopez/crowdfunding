@@ -12,13 +12,14 @@ function Nav(props) {
         <div id="logo">
             <img src="src/images/educaid-logo.png" alt="EducAid-logo" />
         </div>
-        <div id="nav-right">
-            {!loggedIn && <Link to="/login" className="btn">Login In</Link>}
-            <div id="nav-controls">
-                <Link to="/" >Home</Link>
-            </div>
+        <div id="nav-controls">
+          <Link to="/" >Home</Link>
+            {!loggedIn && <Link to="/login" className="btn">Login</Link>}
+            {loggedIn && (
+                  <button className="logout-btn" onClick={handleClick}>Log Out
+                  </button>
+                  )}
         </div>
-        {loggedIn && <button onClick={handleClick}>Sign Out</button>}
     </nav>
 );
 }
