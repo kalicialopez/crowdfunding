@@ -1,8 +1,11 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useOutletContext } from "react-router-dom";
 
 function LoginForm() {
-// State
+  const [, setLoggedIn] = useOutletContext();
+
+
+  // State
 const [credentials, setCredentials] = useState({
     username: "",
     password: "",
@@ -22,7 +25,7 @@ const handleChange = (event) => {
         ...prevCredentials,
         [id]: value,
     }));
-};
+}
 
 const postData = async () => {
     const response = await fetch(
@@ -38,17 +41,32 @@ const postData = async () => {
     return response.json();
   };
 
-const handleSubmit = async (event) => {
-	event.preventDefault();
-	if (credentials.username && credentials.password) {
-        // calling the post data function that we wrote, and will return json
-        const { token } = await postData();
-        window.localStorage.setItem("token", token);
-        navigate("./")
-	}
-  };
+// const handleSubmit = async (event) => {
+// 	event.preventDefault();
+// 	if (credentials.username && credentials.password) {
+//         // calling the post data function that we wrote, and will return json
+//         const { token } = await postData();
+//         window.localStorage.setItem("token", token);
+//           setLoggedIn(true);
+//         navigate("./");
+//         // check if value of token doesn't = undefined. If it doesn't, store the token and change the state to setLoggedIn = true. Otherwise, don't store the token and setLoggedIn = false.
+//       } else {
+//         setLoggedIn(false);
+//       }
+//     }
 
-  
+    const handleSubmit = async (event) => {
+      event.preventDefault();
+      if (credentials.username && credentials.password) {
+        const { token } = await postData();
+        if (token !== undefined) {
+          window.localStorage.setItem("token", token);
+          setLoggedIn(true);
+          navigate("/");
+        } else setLoggedIn(false);
+    }};
+
+
     return (
       <form onSubmit={handleSubmit}>
         <div>
@@ -74,6 +92,6 @@ const handleSubmit = async (event) => {
         </button>
       </form>
     );
-  }
-  
+    }
+    
   export default LoginForm;
