@@ -10,7 +10,7 @@ function Nav(props) {
   return (
     <nav>
         <div id="logo">
-            <img src="src/images/educaid-logo.png" alt="EducAid-logo" />
+            <img src="EducAid-logo.png" alt="EducAid-logo" />
         </div>
         <div id="nav-controls">
           <Link to="/" >Home</Link>
