@@ -40,13 +40,15 @@ function ProjectPage() {
         fetchProject();
       }, []);
 
-      const date = new Date(projectData.date_created); 
-console.log(projectData.pledges)
+      const date = new Date(projectData.date_created);
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+console.log(projectData.pledges) 
+
 
   return (
     <div>
       <h2>{projectData.title}</h2>
-      <h3>Created on: {date.toLocaleDateString()}</h3>
+      <h3>Created on: {date.toLocaleDateString(undefined, options)}</h3>
       <h3>{`Status: ${projectData.is_open}`}</h3>
       <h3>Pledges:</h3>
       <ul>
