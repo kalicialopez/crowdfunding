@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import ProjectCard from "../components/ProjectCard/ProjectCard";
 import Footer from "../components/Footer/Footer";
 
-function HomePage() {
+function AllProjectsPage() {
     //State
     const [projectList, setProjectList] = useState([]);
     
@@ -19,7 +19,7 @@ function HomePage() {
         });
     }, []);
 
-            // Some changes here that were not in thinkific regarding projectData
+        // Some changes here that were not in thinkific regarding projectData
   return (
     <div id="project-list">
       {projectList.map((project, key) => {
@@ -29,4 +29,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default AllProjectsPage;

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import  PledgeForm  from "../components/PledgeForm/PledgeForm";
 
+// Data from class activity
 // import { oneProject } from "../data";
 
 function ProjectPage() {

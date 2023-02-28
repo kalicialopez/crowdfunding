@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-// import './Nav.css';
+import './Nav.css';
 
 function Nav(props) {
   const { loggedIn, setLoggedIn } = props
@@ -9,18 +9,35 @@ function Nav(props) {
   }
   return (
     <nav>
-        <div id="logo">
-            <img src="EducAid-logo.png" alt="EducAid-logo" />
+        <div id="nav-container">
+        <div className="logo-container">
+            <img src="EducAid-logo.png" id="logo" alt="EducAid-logo" />
         </div>
-        <div id="nav-controls">
-          <Link to="/" >Home</Link>
-            {!loggedIn && <Link to="/login" className="btn">Login</Link>}
+
+        
+        <div className="nav-control">
+          <Link to="/" className="button-links">
+          Home
+          </Link>
+            {!loggedIn && <Link to="/login" className="button-links">Login</Link>}
             {loggedIn && (
-                  <button className="logout-btn" onClick={handleClick}>Log Out
-                  </button>
-                  )}
+  <button className="button-links" id="logout-button" onClick={handleClick}>Log Out
+  </button>
+  )}
+          <Link to="/about" className="button-links">
+          About
+          </Link>
+          <Link to="/all-projects" className="button-links"> Campaigns
+          </Link>
+          <Link to="/create-project" className="button-links">
+          Start a Campaign
+          </Link>
         </div>
-    </nav>
+        </div>
+      </nav>
 );
 }
+
+
+
 export default Nav;

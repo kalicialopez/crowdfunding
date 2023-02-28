@@ -5,6 +5,8 @@ import React, { useState } from "react";
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
 import ProjectPage from "./pages/ProjectPage";
+import AllProjectsPage from "./pages/AllProjectsPage";
+import AboutPage from "./pages/AboutPage";
 
 
 // Components
@@ -13,6 +15,7 @@ import Footer from "./components/Footer/Footer";
 
 // CSS
 import "./App.css";
+import CreateProjectPage from "./pages/CreateProjectPage";
 // import { UseState } from "react";
 
 const HeaderLayout = () => {
@@ -33,6 +36,9 @@ const router = createBrowserRouter([
       { path: "/", element: <HomePage /> },
       { path: "/project/:id", element: <ProjectPage /> },
       { path: "/login", element: <LoginPage /> },
+      { path: "/about", element: <AboutPage /> },
+      { path: "/all-projects", element: <AllProjectsPage /> },
+      { path: "/create-project", element: < CreateProjectPage /> },
 
     ],
   },
