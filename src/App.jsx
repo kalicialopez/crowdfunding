@@ -4,8 +4,10 @@ import React, { useState } from "react";
 // Pages
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
+import UserRegistrationPage from "./pages/UserRegistrationPage";
 import ProjectPage from "./pages/ProjectPage";
 import AllProjectsPage from "./pages/AllProjectsPage";
+import CreateProjectPage from "./pages/CreateProjectPage";
 import AboutPage from "./pages/AboutPage";
 
 
@@ -15,8 +17,7 @@ import Footer from "./components/Footer/Footer";
 
 // CSS
 import "./App.css";
-import CreateProjectPage from "./pages/CreateProjectPage";
-// import { UseState } from "react";
+
 
 const HeaderLayout = () => {
   const [loggedIn, setLoggedIn] = useState(window.localStorage.getItem("token") != null)
@@ -35,6 +36,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <HomePage /> },
       { path: "/project/:id", element: <ProjectPage /> },
+      { path: "/register", element: <UserRegistrationPage /> },     
       { path: "/login", element: <LoginPage /> },
       { path: "/about", element: <AboutPage /> },
       { path: "/all-projects", element: <AllProjectsPage /> },

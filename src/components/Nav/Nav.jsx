@@ -7,37 +7,56 @@ function Nav(props) {
       window.localStorage.removeItem("token")
       setLoggedIn(false)
   }
+
   return (
     <nav>
-        <div id="nav-container">
-        <div className="logo-container">
+      <div className="nav-container">
+        <div id="logo-container">
             <img src="EducAid-logo.png" id="logo" alt="EducAid-logo" />
         </div>
 
         
         <div className="nav-control">
           <Link to="/" className="button-links">
-          Home
+            Home
           </Link>
-            {!loggedIn && <Link to="/login" className="button-links">Login</Link>}
-            {loggedIn && (
-  <button className="button-links" id="logout-button" onClick={handleClick}>Log Out
-  </button>
-  )}
           <Link to="/about" className="button-links">
-          About
+            About
           </Link>
-          <Link to="/all-projects" className="button-links"> Campaigns
+          <Link to="/all-projects" className="button-links"> 
+            Campaigns
           </Link>
           <Link to="/create-project" className="button-links">
-          Start a Campaign
+            Start a Campaign
           </Link>
-        </div>
-        </div>
-      </nav>
-);
+
+          {loggedIn && (
+            <Link to="/user/session" className="button-links">
+              My Account
+            </Link>
+            )}
+          {!loggedIn && (
+            <Link to="/register" className="button-links">
+                Sign Up
+            </Link>
+            )}
+          {!loggedIn && (
+            <Link to="/login" className="button-links">
+                Login
+            </Link>
+            )}
+      </div>
+        
+      <div id="logout-wrapper">
+        {loggedIn && (
+          <button id="logout-button" onClick={handleClick}>
+              Log Out
+          </button>
+          )}
+      </div>
+    </div>
+    </nav>
+  );
 }
-
-
 
 export default Nav;
