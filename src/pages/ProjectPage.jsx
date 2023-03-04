@@ -128,3 +128,7 @@ function ProjectPage() {
 
 
 export default ProjectPage;
+
+// do not put Data on the end of objects i.e projectData, commentData, it gets very confusing. Consider rectifying this later.
+// Issues
+// Currently no comments are able to be posted.

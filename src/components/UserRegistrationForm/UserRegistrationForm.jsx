@@ -167,3 +167,5 @@ function UserRegistrationForm() {
 }
 
 export default UserRegistrationForm;
+
+// Currently users other than admin are not able to sign in? Issue with returning token.
