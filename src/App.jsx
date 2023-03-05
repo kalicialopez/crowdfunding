@@ -11,6 +11,7 @@ import AllProjectsPage from "./pages/AllProjectsPage";
 import CreateProjectPage from "./pages/CreateProjectPage";
 import AboutPage from "./pages/AboutPage";
 import SessionUserPage from "./pages/SessionUserPage";
+import ContactPage from "./pages/ContactPage";
 
 
 // Components
@@ -44,6 +45,8 @@ const router = createBrowserRouter([
       { path: "/all-projects", element: <AllProjectsPage /> },
       { path: "/create-project", element: < CreateProjectPage /> },
       { path: "/user/session", element: <SessionUserPage /> },
+      { path: "/contact", element: <ContactPage /> },
+
 
     ],
   },

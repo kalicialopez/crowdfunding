@@ -12,7 +12,7 @@ function Nav(props) {
     <nav>
       <div className="nav-container">
         <div id="logo-container">
-            <img src="EducAid-logo.png" id="logo" alt="EducAid-logo" />
+            <img src={`/assets/images/EducAid-logo.png`} id="logo" alt="EducAid-logo" />
         </div>
 
         
@@ -28,6 +28,9 @@ function Nav(props) {
           </Link>
           <Link to="/create-project" className="button-links">
             Start a Campaign
+          </Link>
+          <Link to="/contact" className="button-links">
+            Contact
           </Link>
 
           {loggedIn && (
