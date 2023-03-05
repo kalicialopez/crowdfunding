@@ -1,6 +1,7 @@
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import React, { useState } from "react";
 
+
 // Pages
 import HomePage from "./pages/HomePage";
 import LoginPage from "./pages/LoginPage";
@@ -9,6 +10,7 @@ import ProjectPage from "./pages/ProjectPage";
 import AllProjectsPage from "./pages/AllProjectsPage";
 import CreateProjectPage from "./pages/CreateProjectPage";
 import AboutPage from "./pages/AboutPage";
+import SessionUserPage from "./pages/SessionUserPage";
 
 
 // Components
@@ -41,6 +43,7 @@ const router = createBrowserRouter([
       { path: "/about", element: <AboutPage /> },
       { path: "/all-projects", element: <AllProjectsPage /> },
       { path: "/create-project", element: < CreateProjectPage /> },
+      { path: "/user/session", element: <SessionUserPage /> },
 
     ],
   },
