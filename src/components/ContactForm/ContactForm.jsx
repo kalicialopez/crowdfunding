@@ -1,8 +1,9 @@
-import React from 'react';
+/* eslint-disable react/react-in-jsx-scope */
+// import React from 'react';
 import { useState } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 
-//CSS
+// CSS
 // import "./ContactForm.css";
 
 function ContactForm() {
