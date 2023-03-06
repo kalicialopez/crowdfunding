@@ -2,7 +2,16 @@ import { useState, useEffect } from "react";
 
 // Components
 import ProjectCard from "../components/ProjectCard/ProjectCard";
-import Footer from "../components/Footer/Footer";
+
+// Images
+
+// Data
+import { allProjects } from "../data";
+
+// CSS
+import "./HomePage.css";
+
+
 
 function HomePage() {
     //State
@@ -19,7 +28,7 @@ function HomePage() {
         });
     }, []);
 
-            // Some changes here that were not in thinkific regarding projectData
+
   return (
     <div id="project-list">
       {projectList.map((project, key) => {

@@ -56,7 +56,9 @@ function UserRegistrationForm() {
     return (
         <div>
         <form onSubmit={handleSubmit}>
-            <h2>Create an account</h2>
+            <h2>
+            Create an account
+            </h2>
             <p>Become part of the EducAid community to start your own campaign, or make pledges.</p>
             <div>
                 <label htmlFor="first_name">

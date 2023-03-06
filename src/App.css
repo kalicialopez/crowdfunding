@@ -1,6 +1,104 @@
+ /* Fonts */ 
+ @import url('https://fonts.googleapis.com/css2?family=PT+Mono&family=Poppins:wght@400;600;800&display=swap');
+
+ html {
+  scroll-behavior: smooth;
+  font-size: 20px;
+  background-color: #ffffff;
+  color: #072446;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* -------- Headings ----------- */
+h1 {
+
+  font-family: 'PT Mono', monospace;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.90rem;
+  margin: 0;
+  padding: 30px;
+  font-weight:bolder;
+  color:#013A67;
+}
+
+h2 {
+  font-family: 'PT Mono', monospace;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.90rem;
+  margin: 0;
+  padding: 30px;
+  font-weight:bolder;
+  color:#013A67;
+}
+
+/* -------- Forms ----------- */
+form {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0 auto;
+  max-width: 550px;
+  padding: 0px 50px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+form h2 {
+  text-align: center;
+  color: #385B4F;
+  font-size: 1.8rem;
+}
+
+form div label {
+  color: #3d3d3d;
+  display: block;
+  font-size: .85rem;
+  padding: 2px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+form div input {
+  border: 1px solid #E1AA12;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 10px;
+  text-align: left;
+  font-size: .85rem;
+}
+
+form button {
+  background-color: #00B0A6;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  margin: 20px 0px;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+
+/* ---------- AllProjects-Grid  ----------- */
 #project-list {
   display: grid;
   grid-template-columns: 30% 30% 30%;
   column-gap: 10px;
   row-gap: 10px;
 }
+
+
+/* ---------- Footer ----------- */
+footer {
+  padding: 20px;
+  background-color: #54B89E;
+  text-align: center;
+  font-family: 'PT Mono', monospace;
+}
+
