@@ -1,6 +1,8 @@
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=PT+Mono&family=Poppins:wght@400;600;800&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;0,800;0,900;1,600;1,800;1,900&family=PT+Mono&family=Poppins:wght@400;600;800&display=swap");
+
 html {
   scroll-behavior: smooth;
   font-size: 20px;
@@ -21,6 +23,20 @@ html {
   height: auto;
   justify-content: center;
   background-size: contain;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: end;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
 }
 
 /* -------- Headings ----------- */
@@ -152,8 +168,8 @@ form div button:hover {
 }
 
 /* ---------- Buttons ----------- */
-.button-links {
-}
+/* .button-links {
+} */
 
 /* ---------- Footer ----------- */
 footer {

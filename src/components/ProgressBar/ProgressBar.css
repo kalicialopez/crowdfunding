@@ -1,0 +1,23 @@
+#progress-bar {
+  height: 10px;
+  width: 100%;
+  /* max-width: 100%; */
+  border-color: rgba(51, 58, 64, 0.528);
+  border-style: solid;
+  border-radius: 10px 10px 10px 10px;
+}
+
+#progress {
+  background-color: #bab2a7;
+  height: inherit;
+  border-radius: inherit;
+}
+
+#progress-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+}

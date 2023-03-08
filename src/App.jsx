@@ -1,5 +1,5 @@
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
-import React, { useState } from "react";
+import React, { Link, useState } from "react";
 
 // Pages
 import HomePage from "./pages/HomePage";
@@ -26,12 +26,23 @@ const HeaderLayout = () => {
   return (
     <>
       <Nav loggedIn={loggedIn} setLoggedIn={setLoggedIn} />
+
       <div id="hero-image-container">
         <img
           src={`/assets/media/banner.png`}
           id="hero-image"
           alt="EducAid-banner"
         />
+      </div>
+      <div className="hero-text">
+        <p className="hero-subtext">It's never too late for change</p>
+        <h1 id="hero-text">START CARVING YOUR NEW PATH TODAY</h1>
+        <button>Create a campaign</button>
+        <p>Help others carve their paths</p>
+        <button>Donate now</button>
+        {/* <Link to="/login" className="button-links">
+          Login to Pledge
+        </Link> */}
       </div>
       <Outlet context={[loggedIn, setLoggedIn]} />
       <Footer />
