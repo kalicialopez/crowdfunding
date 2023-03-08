@@ -2,24 +2,23 @@ import { useState, useEffect } from "react";
 
 // Components
 import ProjectCard from "../components/ProjectCard/ProjectCard";
-import Footer from "../components/Footer/Footer";
 
 function AllProjectsPage() {
-    //State
-    const [projectList, setProjectList] = useState([]);
-    
-    useEffect(() => {
-        fetch(`${import.meta.env.VITE_API_URL}projects/`)
-        .then((results) => {
-            return results.json();
-        })
-        .then((data) => {
-            setProjectList(data);
-            console.log(data);
-        });
-    }, []);
+  //State
+  const [projectList, setProjectList] = useState([]);
 
-        // Some changes here that were not in thinkific regarding projectData
+  useEffect(() => {
+    fetch(`${import.meta.env.VITE_API_URL}projects/`)
+      .then((results) => {
+        return results.json();
+      })
+      .then((data) => {
+        setProjectList(data);
+        console.log(data);
+      });
+  }, []);
+
+  // Some changes here that were not in thinkific regarding projectData
   return (
     <div id="project-list">
       {projectList.map((project, key) => {

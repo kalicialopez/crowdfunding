@@ -1,63 +1,69 @@
 import { Link } from "react-router-dom";
-import './Nav.css';
+import "./Nav.css";
 
 function Nav(props) {
-  const { loggedIn, setLoggedIn } = props
+  const { loggedIn, setLoggedIn } = props;
   const handleClick = () => {
-      window.localStorage.removeItem("token")
-      setLoggedIn(false)
-  }
+    window.localStorage.removeItem("token");
+    setLoggedIn(false);
+  };
 
   return (
     <nav>
-      <div className="nav-container">
-        <div id="logo-container">
-            <img src={`/assets/images/EducAid-logo.png`} id="logo" alt="EducAid-logo" />
-        </div>
-
-        
-        <div className="nav-control">
-          <Link to="/" className="button-links">
-            Home
-          </Link>
-          <Link to="/about" className="button-links">
-            About
-          </Link>
-          <Link to="/all-projects" className="button-links"> 
-            Campaigns
-          </Link>
-          <Link to="/create-project" className="button-links">
-            Start a Campaign
-          </Link>
-          <Link to="/contact" className="button-links">
-            Contact
-          </Link>
-
-          {loggedIn && (
-            <Link to="/user/session" className="button-links">
-              My Account
-            </Link>
-            )}
-          {!loggedIn && (
-            <Link to="/register" className="button-links">
-                Sign Up
-            </Link>
-            )}
-          {!loggedIn && (
-            <Link to="/login" className="button-links">
-                Login
-            </Link>
-            )}
+      <div id="logo-container">
+        <img src={`/assets/media/logo.png`} id="logo" alt="EducAid-logo" />
       </div>
-        
-      <div id="logout-wrapper">
+      <ul className="navbar">
+        <li className="nav-link">
+          <Link to="/">Home</Link>
+        </li>
+        <li className="nav-link">
+          <Link to="/about">About</Link>
+        </li>
+        <li className="nav-link">
+          <Link to="/all-projects">Campaigns</Link>
+        </li>
+        <li className="nav-link">
+          <Link to="/create-project">Start a Campaign</Link>
+        </li>
+        <li className="nav-link">
+          <Link to="/contact">Contact</Link>
+        </li>
+
         {loggedIn && (
-          <button id="logout-button" onClick={handleClick}>
-              Log Out
-          </button>
+          <li className="nav-link">
+            <Link to="/user/session">My Account</Link>
+          </li>
+        )}
+
+        {!loggedIn && (
+          <li className="nav-link">
+            <Link to="/register">Sign Up</Link>
+          </li>
+        )}
+        {!loggedIn && (
+          <li className="nav-link">
+            <Link to="/login">Login</Link>
+          </li>
+        )}
+
+        <div id="logout-wrapper">
+          {loggedIn && (
+            <li className="nav-link">
+              <button id="logout-button" onClick={handleClick}>
+                Log Out
+              </button>
+            </li>
           )}
+        </div>
+      </ul>
+
+      <div className="burger">
+        <div className="line1"></div>
+        <div className="line2"></div>
+        <div className="line3"></div>
       </div>
-    </div>
+      {/* </div> */}
     </nav>
   );
 }

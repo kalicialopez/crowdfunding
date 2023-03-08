@@ -1,0 +1,107 @@
+#logo {
+  /* max-width: 30%; */
+  height: auto;
+  margin: 0;
+  width: min(50vw, 200px);
+}
+/* 
+#logo-container {
+} */
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  padding: 10px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+nav::after {
+  border-bottom: 8px solid #e1aa12;
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  bottom: 0;
+  margin: 0 auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  /* width: 50%; */
+  padding-left: 5px;
+  align-items: right;
+}
+
+.nav-link {
+  display: inline-block;
+  /* text-transform: uppercase; */
+  text-decoration: none;
+  color: #013a67;
+  border-bottom: 2px solid transparent;
+  /* transition: 0.5s ease;
+  transform: translateX(0%); */
+  font-size: 1em;
+  padding: 10px;
+  margin: 0, 80px;
+}
+
+.nav-link:hover {
+  transition: 0.5s ease;
+  transform: translateX(0%);
+  color: #54b89e;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: underline;
+  letter-spacing: 4px;
+  border-top: 2px solid #e1aa12;
+  border-bottom: 2px solid #e1aa12;
+  letter-spacing: 4px;
+  cursor: pointer;
+}
+
+/* This code removes the default styling from a button and makes it inherit existing styling */
+#logout-button {
+  background-color: transparent;
+  border-width: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  padding: 0;
+}
+
+#logout-button:hover {
+  transition: 0.5s ease;
+  transform: translateX(0%);
+  color: #54b89e;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: underline;
+  letter-spacing: 4px;
+  border-top: 2px solid #e1aa12;
+  border-bottom: 2px solid #e1aa12;
+  letter-spacing: 4px;
+  cursor: pointer;
+}
+
+.burger {
+  display: none;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  margin: 5px;
+  transition: all 0.5s ease;
+}
