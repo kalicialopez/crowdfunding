@@ -119,7 +119,7 @@ form {
   flex-direction: column;
   justify-content: space-around;
   /* margin: 0 auto; */
-  margin: 50px auto;
+  margin: 10px auto;
   max-width: 600px;
   padding: 0px 25px;
   border-radius: 10px;
@@ -270,6 +270,7 @@ button:hover,
 
 /* ---------- Footer ----------- */
 footer {
+  border-top: 12px solid #e1aa12;
   padding: 20px;
   background-color: #54b89e;
   text-align: center;

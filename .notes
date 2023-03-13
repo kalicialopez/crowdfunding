@@ -1,12 +1,17 @@
-- Create a campaign page throwing error when not logged in.
-  The link to login is not working so the whole page doesn't load.
+- Create a campaign page throwing error when not logged in (need to create a new page asking users to login OR create an account, for this)
+- redirect needed when someone logs in, back to the homepage.
 
 - unable to remove default link styling (color, underline) on nav bar and project card link
-  -unable to centre project card date
 - some images for project card have different margins and padding?
-
--only want to show 3 projects on homepage.
 
 -hamburger menu
 
+-search function in All projects page
 -put links through the page text
+
+-form buttons need to be on left and become centralized as screen size gets smaller.
+
+-hero text needs to be formatted correctly and made responsive.
+
+-links homepage
+-links to

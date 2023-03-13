@@ -53,11 +53,11 @@ function UserRegistrationForm() {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <h2>Create an account</h2>
-        <p>
+        <h1>Create an account</h1>
+        <h2>
           Become part of the EducAid community to start your own campaign, or
           make pledges.
-        </p>
+        </h2>
         <div>
           <label htmlFor="first_name">First name:</label>
           <input type="text" id="first-name" onChange={handleChange} />

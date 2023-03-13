@@ -21,6 +21,7 @@ function AllProjectsPage() {
 
   return (
     <body className="page-body">
+      <h1>Browse all Campaigns</h1>
       <div id="project-list">
         {projectList.map((project, key) => {
           return <ProjectCard key={key} projectData={project} />;

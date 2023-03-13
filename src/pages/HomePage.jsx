@@ -21,7 +21,7 @@ function HomePage() {
       })
       .then((data) => {
         setProjectList(data);
-        console.log(data);
+        // console.log(data);
       });
   }, []);
 
@@ -29,7 +29,7 @@ function HomePage() {
   const shuffleProjectList = () => {
     const shuffledList = [...projectList]
       .sort(() => Math.random() - 0.5)
-      .slice(0, 6);
+      .slice(0, 3);
     setShuffledSortedProjectList(shuffledList);
   };
 
