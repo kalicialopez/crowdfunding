@@ -113,7 +113,7 @@ function PledgeForm(props) {
           </form>
         </div>
       ) : (
-        <Link to="/login" className="button-links">
+        <Link to="/login" className="button-link">
           Login to Pledge
         </Link>
       )}

@@ -20,11 +20,13 @@ function AllProjectsPage() {
 
   // Some changes here that were not in thinkific regarding projectData
   return (
-    <div id="project-list">
-      {projectList.map((project, key) => {
-        return <ProjectCard key={key} projectData={project} />;
-      })}
-    </div>
+    <body className="page-body">
+      <div id="project-list">
+        {projectList.map((project, key) => {
+          return <ProjectCard key={key} projectData={project} />;
+        })}
+      </div>
+    </body>
   );
 }
 

@@ -1,7 +1,11 @@
 import UserRegistrationForm from "../components/UserRegistrationForm/UserRegistrationForm";
 
 function UserRegistrationPage() {
-    return <UserRegistrationForm/>;
+  return (
+    <body className="page-body">
+      <UserRegistrationForm />
+    </body>
+  );
 }
 
 export default UserRegistrationPage;

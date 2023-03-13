@@ -5,8 +5,10 @@ function ContactPage() {
   window.sessionStorage.removeItem("userData");
   return (
     <>
-      <h1>Contact EducAid </h1>
-      <ContactForm />
+      <body className="page-body">
+        <h1>Contact EducAid </h1>
+        <ContactForm />
+      </body>
     </>
   );
 }

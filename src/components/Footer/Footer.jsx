@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <footer>
+      🎓
+      <br />
       © 2023 EducAid <br />
       Created by Karen Lopez
       {/* <Link to ="/"></Link> */}

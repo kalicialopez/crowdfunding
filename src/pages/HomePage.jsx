@@ -23,11 +23,15 @@ function HomePage() {
 
   // Some changes here that were not in thinkific regarding projectData
   return (
-    <div id="project-list">
-      {projectList.map((project, key) => {
-        return <ProjectCard key={key} projectData={project} />;
-      })}
-    </div>
+    <body className="page-body">
+      <h1>Welcome to EducAid</h1>
+
+      <div id="project-list">
+        {projectList.map((project, key) => {
+          return <ProjectCard key={key} projectData={project} />;
+        })}
+      </div>
+    </body>
   );
 }
 

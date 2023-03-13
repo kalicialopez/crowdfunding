@@ -1,0 +1,2 @@
+- Create a campaign page throwing error when not logged in.
+  The link to login is not working so the whole page doesn't load.

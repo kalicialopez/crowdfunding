@@ -98,7 +98,7 @@ function CommentForm() {
           </form>
         </div>
       ) : (
-        <Link to="/login" className="button-links">
+        <Link to="/login" className="button-link">
           Login to comment
         </Link>
       )}

@@ -11,12 +11,14 @@ function Nav(props) {
   return (
     <nav>
       <div id="logo-container">
-        <img src={`/assets/media/logo.png`} id="logo" alt="EducAid-logo" />
+        <Link to="/">
+          <img src={`/assets/media/logo.png`} id="logo" alt="EducAid-logo" />
+        </Link>
       </div>
       <ul className="navbar">
-        <li className="nav-link">
+        {/* <li className="nav-link">
           <Link to="/">Home</Link>
-        </li>
+        </li> */}
         <li className="nav-link">
           <Link to="/about">About</Link>
         </li>
