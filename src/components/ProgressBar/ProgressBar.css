@@ -1,5 +1,5 @@
 #progress-bar {
-  height: 10px;
+  height: 20px;
   width: 100%;
   /* max-width: 100%; */
   border-color: rgba(51, 58, 64, 0.528);
@@ -8,7 +8,7 @@
 }
 
 #progress {
-  background-color: #bab2a7;
+  background-color: #006a64;
   height: inherit;
   border-radius: inherit;
 }

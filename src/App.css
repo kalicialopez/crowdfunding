@@ -11,9 +11,10 @@ html {
   font-family: "Poppins", sans-serif;
 }
 
-/* ------- Hero-image-------- */
+/* ------- Hero-image and text-------- */
 .hero-image-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -23,20 +24,40 @@ html {
   height: auto;
   justify-content: center;
   background-size: contain;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)); */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  overflow: hidden;
+  opacity: 1.2;
 }
 
+/* all-text-container */
 .hero-text {
-  text-align: end;
+  /* display: flex; */
+  flex-direction: column;
+  text-align: right;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: white;
+  color: #e5771e;
+  font-weight: 500;
+  text-align: end;
+  right: 50px;
+  /* padding: ;
+  margin- */
+}
+
+/* hero-h1 */
+#hero-text {
+  color: #e5771e;
+  font-weight: 900;
+  /* font-style: italic; */
+  font-family: "Montserrat";
+  position: absolute;
+  text-align: end;
 }
 
 /* -------- Headings ----------- */

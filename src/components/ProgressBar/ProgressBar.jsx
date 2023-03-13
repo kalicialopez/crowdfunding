@@ -29,11 +29,11 @@ const ProgressBar = ({ goal, total }) => {
 
       {total < goal ? (
         <p className="sub-text">
-          <b>${total > 0 ? total : "0"} raised</b> of ${goal} goal
+          <b>${total > 0 ? total : "0"} of</b> ${goal} raised
         </p>
       ) : (
         <p>
-          Goal reached! | ${total} raised of ${goal} goal
+          Goal reached! | ${total} of ${goal} raised
         </p>
       )}
     </div>
