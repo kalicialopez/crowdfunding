@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link, useOutletContext } from "react-router-dom";
 
 // Components
 import ProjectCard from "../components/ProjectCard/ProjectCard";
@@ -18,7 +19,6 @@ function AllProjectsPage() {
       });
   }, []);
 
-  // Some changes here that were not in thinkific regarding projectData
   return (
     <body className="page-body">
       <div id="project-list">

@@ -16,13 +16,14 @@ nav {
   align-items: center;
   position: sticky;
   top: 0;
-  padding: 10px;
+  padding: 5px;
   background-color: #ffffff;
   overflow: hidden;
+  z-index: 1000;
 }
 
 nav::after {
-  border-bottom: 8px solid #e1aa12;
+  border-bottom: 12px solid #e1aa12;
   content: "";
   position: absolute;
   left: 0;

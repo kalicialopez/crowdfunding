@@ -1,2 +1,12 @@
 - Create a campaign page throwing error when not logged in.
   The link to login is not working so the whole page doesn't load.
+
+- unable to remove default link styling (color, underline) on nav bar and project card link
+  -unable to centre project card date
+- some images for project card have different margins and padding?
+
+-only want to show 3 projects on homepage.
+
+-hamburger menu
+
+-put links through the page text
