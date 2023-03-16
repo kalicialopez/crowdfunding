@@ -23,3 +23,14 @@
   margin: auto;
   text-decoration: none;
 }
+
+p .sub-text a {
+  text-decoration: none;
+  color: #008089;
+}
+
+p .sub-text a:hover {
+  text-decoration: none;
+  color: #055d6b;
+  font-weight: 400px;
+}

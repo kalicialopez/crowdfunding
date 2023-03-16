@@ -19,8 +19,10 @@ function ProjectCard(props) {
           <h3 className="project-card-name-link">{projectData.title}</h3>
           <ProgressBar goal={projectData.goal} total={projectData.total} />
           <p className="project-card-dates">
-            Created: {new Date(projectData.date_created).toLocaleDateString()}{" "}
-            ⏳ Deadline:{" "}
+            Created: {new Date(projectData.date_created).toLocaleDateString()}
+            <br />
+            ⏳ <br />
+            Deadline:
             {new Date(projectData.campaign_deadline).toLocaleDateString()}
           </p>
         </div>

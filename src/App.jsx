@@ -36,16 +36,14 @@ const HeaderLayout = () => {
       </div>
       <div className="hero-text">
         <p className="hero-subtext">It's never too late for change</p>
-        <h1 id="hero-text">
-          {" "}
-          <div>START CARVING YOUR </div> NEW PATH TODAY
-        </h1>
-        {/* <button>Create a campaign</button> */}
-        <p>Help others carve their paths</p>
-        {/* <button>Donate now</button> */}
-        {/* <Link to="/login" className="button-links">
-          Login to Pledge
-        </Link> */}
+        <p id="hero-header">BEGIN CARVING YOUR NEW PATH TODAY</p>
+        <a href="create-project" className="hero-button-link">
+          Create a campaign
+        </a>
+        <p className="hero-subtext">Help others carve their paths</p>
+        <a href="/all-projects" className="hero-button-link">
+          Donate now
+        </a>
       </div>
       <Outlet context={[loggedIn, setLoggedIn]} />
       <Footer />

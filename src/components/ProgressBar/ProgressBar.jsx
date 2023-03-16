@@ -4,10 +4,10 @@ import "./ProgressBar.css";
 
 // Code 1
 
-const ProgressBar = ({ goal, total }) => {
-  const progressPercentage = Math.round((total / goal) * 100) + "%";
+const ProgressBar = ({ goal, sum_pledges }) => {
+  const progressPercentage = Math.round((sum_pledges / goal) * 100) + "%";
 
-  const remainder = Math.round(goal - total, 2);
+  const remainder = Math.round(goal - sum_pledges, 2);
   // const goalPercent = goal + "%";
   console.log(progressPercentage);
   const progressStyle = {
@@ -20,20 +20,22 @@ const ProgressBar = ({ goal, total }) => {
   return (
     <div id="progress-container">
       <div id="progress-bar">
-        {total < goal ? (
-          <div style={progressStyle} id="progress"></div>
+        {sum_pledges < goal ? (
+          <div style={progressStyle} id="progress">
+            {progressPercentage}
+          </div>
         ) : (
           <div style={completeGoalStyle} id="progress"></div>
         )}
       </div>
 
-      {total < goal ? (
+      {sum_pledges < goal ? (
         <p className="sub-text">
-          <b>${total > 0 ? total : "0"} of</b> ${goal} raised
+          <b>${sum_pledges > 0 ? sum_pledges : "0"} </b>of ${goal} raised
         </p>
       ) : (
         <p>
-          Goal reached! | ${total} of ${goal} raised
+          Goal reached! | ${sum_pledges} of ${goal} raised
         </p>
       )}
     </div>

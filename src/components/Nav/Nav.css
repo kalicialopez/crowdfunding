@@ -42,7 +42,7 @@ nav::after {
   align-items: right;
 }
 
-.nav-link {
+.nav-link a {
   display: inline-block;
   /* text-transform: uppercase; */
   text-decoration: none;
@@ -55,7 +55,7 @@ nav::after {
   margin: 0, 80px;
 }
 
-.nav-link:hover {
+.nav-link a:hover {
   transition: 0.5s ease;
   transform: translateX(0%);
   color: #54b89e;
@@ -68,6 +68,24 @@ nav::after {
   letter-spacing: 4px;
   cursor: pointer;
 }
+
+/* .nav-link a:link {
+  display: inline-block;
+  /* text-transform: uppercase; */
+/* text-decoration: none;
+  color: #013a67;
+  border-bottom: 2px solid transparent; */
+/* transition: 0.5s ease;
+    transform: translateX(0%); */
+/* font-size: 1em;
+  padding: 10px;
+  margin: 0, 80px;
+} */
+
+/* a:visited — after the user has visited the link
+
+
+a:active — as the user is clicking on the link */
 
 /* This code removes the default styling from a button and makes it inherit existing styling */
 #logout-button {

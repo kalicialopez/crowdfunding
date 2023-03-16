@@ -39,26 +39,35 @@
   padding: 10px;
 }
 
-.project-text {
+.project-text h3,
+a {
   /* display: flex; */
   justify-content: center;
   align-items: center;
   text-decoration: none;
 }
 
-.p {
+.project-text p .subtext,
+.project-card-dates a {
   text-decoration: none;
   display: flex;
   justify-content: center;
 }
 
-#project-card-name-link {
+#project-card-name-link,
+a {
   text-decoration: none;
   font-family: "PT Mono", monospace;
   /* font-size: 1em; */
   color: #013a67;
 }
 
-#project-card-name-link:hover {
-  color: #a08880;
+#project-card-name-link,
+a:hover {
+  font-weight: 500px;
 }
+
+/* a:-webkit-any-link {
+  text-decoration: none !important;
+  color: #00b0a6;
+} */
