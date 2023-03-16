@@ -17,7 +17,10 @@ function ProjectCard(props) {
         </div>
         <div className="project-text">
           <h3 className="project-card-name-link">{projectData.title}</h3>
-          <ProgressBar goal={projectData.goal} total={projectData.total} />
+          <ProgressBar
+            goal={projectData.goal}
+            sum_pledges={projectData.sum_pledges}
+          />
           <p className="project-card-dates">
             Created: {new Date(projectData.date_created).toLocaleDateString()}
             <br />

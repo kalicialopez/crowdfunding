@@ -81,7 +81,7 @@ function PledgeForm(props) {
           <form onSubmit={handleSubmit}>
             <h2> Pledge to this Campaign</h2>
             <div>
-              <label htmlFor="pledge_amount">Amount:</label>
+              <label htmlFor="amount">Amount:</label>
               <input
                 type="number"
                 id="pledge_amount"

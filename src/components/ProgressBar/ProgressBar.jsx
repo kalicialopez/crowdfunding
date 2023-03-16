@@ -25,7 +25,7 @@ const ProgressBar = ({ goal, sum_pledges }) => {
             {progressPercentage}
           </div>
         ) : (
-          <div style={completeGoalStyle} id="progress"></div>
+          <div style={completeGoalStyle} id=""></div>
         )}
       </div>
 
