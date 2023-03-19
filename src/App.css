@@ -217,6 +217,188 @@ form div button:hover {
   row-gap: 10px;
 }
 
+/* ---------- Projects-Page  ----------- */
+.project-page-project-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-items: center;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.project-page-project-text {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-page-project-image {
+  width: auto !important; /*override the width below*/
+  width: 100%;
+  max-width: 500px;
+  object-fit: cover;
+  border-radius: 15px;
+  padding: 8px;
+  border: 1px solid #00b0a6;
+  display: flex;
+}
+
+.project-page-project-image:hover {
+  border: 3px solid #00b0a6;
+  display: flex;
+}
+
+/* Owner profile */
+.project-page-owner-profile-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.project-page-owner-profile-image-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.project-page-owner-profile-image {
+  padding-right: 25px;
+  width: auto !important; /*override the width below*/
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 18px;
+  padding: 10px;
+  border: 1px solid #00b0a6;
+  display: flex;
+}
+
+.project-page-owner-profile-image:hover {
+  border: 3px solid #00b0a6;
+  display: flex;
+}
+
+/* speech bubble */
+.bio-box {
+  width: 300px;
+  margin: 0 auto;
+  background: #00bfb6;
+  padding: 20px;
+  text-align: center;
+  font-weight: 900;
+  color: #fff;
+  font-family: arial;
+  position: relative;
+  border-radius: 15px;
+}
+
+/* speech bubble */
+.bio-sb:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid #00bfb6;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #00bfb6;
+  border-bottom: 10px solid transparent;
+  left: 19px;
+  bottom: -19px;
+}
+
+.project-page-owner-profile-text {
+  text-align: left;
+  padding-left: 35px;
+}
+
+/* Pledges */
+.project-page-pledge-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  justify-items: center;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.pledge-list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  /* overflow-x: visible; */
+  overflow-y: scroll;
+  padding: auto;
+  margin: 0;
+  height: 350px;
+}
+
+.pledge-box {
+  width: 300px;
+  /* margin: 50px auto; */
+  border: 4px solid;
+  padding: 20px;
+  text-align: center;
+  /* font-weight: 900; */
+  color: #00bfb6;
+  font-family: "Montserrat";
+  position: relative;
+  border-radius: 15px;
+}
+
+.pledge-sb:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid #00bfb6;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #00bfb6;
+  border-bottom: 10px solid transparent;
+  right: -20px;
+  top: 6px;
+}
+
+.pledge-sb:after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 7px solid #fff;
+  border-right: 7px solid transparent;
+  border-top: 7px solid #fff;
+  border-bottom: 7px solid transparent;
+  right: -11px;
+  top: 10px;
+}
+
+/* Comments */
+.project-page-comments-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  justify-items: center;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.pledge-list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  /* overflow-x: visible; */
+  overflow-y: scroll;
+  padding: auto;
+  margin: 0;
+  height: 350px;
+}
+
 /* -------- Buttons and button links --------- */
 button,
 .button-link {

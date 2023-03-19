@@ -2,9 +2,13 @@
 - redirect needed when someone logs in, back to the homepage.
 
 - unable to remove default link styling (color, underline) on nav bar and project card link
+  -- this issue is temporarily solved using a:-webkit-any-link { text-decoration: none !important; }
+  https://stackoverflow.com/questions/35303995/cannot-override-webkit-any-link
+
 - some images for project card have different margins and padding?
 
 -hamburger menu
+-stats section for homepage
 
 -search function in All projects page
 -put links through the page text
@@ -13,5 +17,8 @@
 
 -hero text needs to be formatted correctly and made responsive.
 
+- when goal reached, progress bar does not remain a solid colour :/
+
+Throughout text
 -links homepage
--links to
+-links to pledge, create campaign or to sign in.

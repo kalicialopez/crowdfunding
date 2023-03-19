@@ -79,7 +79,7 @@ function PledgeForm(props) {
       {loggedIn ? (
         <div>
           <form onSubmit={handleSubmit}>
-            <h2> Pledge to this Campaign</h2>
+            {/* <h2> Pledge to this Campaign</h2> */}
             <div>
               <label htmlFor="amount">Amount:</label>
               <input

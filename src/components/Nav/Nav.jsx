@@ -34,7 +34,7 @@ function Nav(props) {
 
         {loggedIn && (
           <li className="nav-link">
-            <Link to="/user/session">My Account</Link>
+            <Link to="/user/session">My EducAid</Link>
           </li>
         )}
 

@@ -77,8 +77,8 @@ function CommentForm() {
     <>
       {loggedIn ? (
         <div>
+          {/* <h2> Comment on this Campaign</h2> */}
           <form onSubmit={handleSubmit}>
-            <h2> Comment on this Campaign</h2>
             <div>
               <label htmlFor="title">Title:</label>
               <input type="text" id="title" onChange={handleChange} />
