@@ -14,7 +14,7 @@ function PledgeForm(props) {
   const [pledges, setPledges] = useState({
     // from JSON Raw Body in Deployed (default values)
     // this is what is returned at the bottom
-    pledge_amount: null,
+    amount: null,
     comment: "",
     anonymous: false,
   });
@@ -84,7 +84,7 @@ function PledgeForm(props) {
               <label htmlFor="amount">Amount:</label>
               <input
                 type="number"
-                id="pledge_amount"
+                id="amount"
                 placeholder="Enter amount"
                 onChange={handleChange}
               />

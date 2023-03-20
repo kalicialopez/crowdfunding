@@ -304,6 +304,7 @@ form div button:hover {
 .project-page-project-container {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-between;
   justify-items: center;
   border-radius: 15px;
@@ -314,6 +315,8 @@ form div button:hover {
 .project-page-project-text {
   text-align: left;
   display: flex;
+  /* flex-wrap: wrap; */
+
   flex-direction: column;
 }
 
@@ -326,6 +329,7 @@ form div button:hover {
   padding: 8px;
   border: 1px solid #00b0a6;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .project-page-project-image:hover {
@@ -336,6 +340,8 @@ form div button:hover {
 /* Owner profile */
 .project-page-owner-profile-container {
   display: flex;
+  flex-wrap: wrap;
+
   flex-direction: row;
   justify-content: center;
   border-radius: 15px;
@@ -345,6 +351,9 @@ form div button:hover {
 
 .project-page-owner-profile-image-container {
   display: flex;
+  flex-wrap: wrap;
+  flex-wrap: wrap;
+
   flex-direction: row;
   justify-content: center;
 }
@@ -402,6 +411,8 @@ form div button:hover {
 /* Pledges */
 .project-page-pledge-container {
   display: flex;
+  flex-wrap: wrap;
+
   flex-direction: row;
   justify-content: space-evenly;
   justify-items: center;
