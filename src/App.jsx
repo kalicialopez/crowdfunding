@@ -36,7 +36,9 @@ const HeaderLayout = () => {
       </div>
       <div className="hero-text">
         <p className="hero-subtext">It's never too late for change</p>
-        <p id="hero-header">BEGIN CARVING YOUR NEW PATH TODAY</p>
+        <p className="hero-header">
+          BEGIN CARVING YOUR <br></br>NEW PATH TODAY
+        </p>
         <a href="create-project" className="hero-button-link">
           Create a campaign
         </a>

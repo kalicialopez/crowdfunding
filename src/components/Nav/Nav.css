@@ -48,6 +48,8 @@ nav::after {
   text-decoration: none;
   color: #013a67;
   border-bottom: 2px solid transparent;
+  /* border-right: 1px solid #e1aa12; */
+
   /* transition: 0.5s ease;
   transform: translateX(0%); */
   font-size: 1em;
@@ -97,9 +99,35 @@ a:active — as the user is clicking on the link */
   font-weight: inherit;
   line-height: inherit;
   padding: 0;
+
+  display: inline-block;
+  font-family: "PT Mono", monospace;
+  box-shadow: none;
+  border-radius: 0%;
+  /* text-transform: uppercase; */
+  text-decoration: none;
+  color: #013a67;
+  border-bottom: 2px solid transparent;
+  /* transition: 0.5s ease;
+  transform: translateX(0%); */
+  font-size: 1em;
+  padding: 10px;
+  margin: 0, 80px;
 }
 
 #logout-button:hover {
+  transition: 0.5s ease;
+  transform: translateX(0%);
+  color: #54b89e;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: underline;
+  letter-spacing: 4px;
+  border-top: 2px solid #e1aa12;
+  border-bottom: 2px solid #e1aa12;
+  letter-spacing: 4px;
+  cursor: pointer;
+
   transition: 0.5s ease;
   transform: translateX(0%);
   color: #54b89e;
