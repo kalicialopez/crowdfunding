@@ -1,3 +1,5 @@
+// attempt 1
+
 // import { useState, useEffect } from "react";
 // import { useParams } from "react-router-dom";
 
@@ -136,6 +138,185 @@
 
 // export default ProjectPage;
 
+// Attempt 2
+
+// import { useState, useEffect } from "react";
+// import { useParams } from "react-router-dom";
+
+// // Components
+// import PledgeForm from "../components/PledgeForm/PledgeForm";
+// import CommentForm from "../components/CommentForm/CommentForm";
+// import ProgressBar from "../components/ProgressBar/ProgressBar";
+
+// function ProjectPage() {
+//   // State
+//   const [projectData, setProjectData] = useState({ pledges: [] });
+//   const [commentData, setCommentData] = useState([]);
+//   const [ownerData, setOwnerData] = useState({ owner: [] });
+
+//   // Hooks
+//   const { id } = useParams();
+
+//   // Logged in check
+//   const token = window.localStorage.getItem("token");
+
+//   // Old code snippet using async
+//   useEffect(() => {
+//     const fetchProject = async () => {
+//       try {
+//         const res = await fetch(
+//           `${import.meta.env.VITE_API_URL}projects/${id}`
+//         );
+//         const data = await res.json();
+
+//         const ownerRes = await fetch(
+//           `${import.meta.env.VITE_API_URL}users/${data.owner}`
+//         );
+//         const ownerData = await ownerRes.json();
+
+//         const commentRes = await fetch(
+//           `${import.meta.env.VITE_API_URL}comments/`
+//         );
+//         const commentData = await commentRes.json();
+
+//         console.log(commentData);
+
+//         setProjectData(data);
+//         setOwnerData(ownerData);
+//         setCommentData([commentData]);
+//       } catch (err) {
+//         console.error(err);
+//       }
+//     };
+//     fetchProject();
+//   }, []);
+
+//   return (
+//     <>
+//       <body className="page-body">
+//         <h1>{projectData.title}</h1>
+//         <div id="project-page">
+//           {/* PROJECT */}
+//           <div className="project-page-project-and-owner-profile-container">
+//             <div className="project-page-project-container">
+//               <div className="project-page-project-text">
+//                 <p>
+//                   <strong>Created:</strong>{" "}
+//                   {new Date(projectData.date_created).toDateString()}
+//                 </p>
+//                 <p>
+//                   <strong>Status:</strong>
+//                   {projectData.is_open ? (
+//                     <span> Active</span>
+//                   ) : (
+//                     <span>Closed</span>
+//                   )}
+//                 </p>
+//                 <div className="progressbar-container">
+//                   <ProgressBar
+//                     goal={projectData.goal}
+//                     sum_pledges={projectData.sum_pledges}
+//                   />
+//                 </div>
+
+//                 <p>{projectData.description}</p>
+//                 <p className="realistic-marker-highlight">
+//                   <strong>⏳ Deadline:</strong>{" "}
+//                   {new Date(projectData.campaign_deadline).toDateString()}
+//                 </p>
+//               </div>
+//               <div className="project-page-project-image-container">
+//                 <img
+//                   className="project-page-project-image"
+//                   src={projectData.image}
+//                 />
+//               </div>
+//             </div>
+
+//             {/* OWNER PROFILE  */}
+//             <h2 className="project-page-owner-profile-heading">
+//               Meet {ownerData.username}
+//             </h2>
+//             <div className="project-page-owner-profile-container">
+//               <div className="project-page-owner-profile-image-container">
+//                 <img
+//                   className="project-page-owner-profile-image"
+//                   src={ownerData.profile_picture}
+//                 />
+//                 <div className="project-page-owner-profile-text">
+//                   <p>
+//                     <center>
+//                       <div class="bio-box bio-sb">
+//                         <i>"{ownerData.bio}"</i>
+//                       </div>
+//                     </center>
+//                   </p>
+//                   <br></br>
+//                   <p>
+//                     {ownerData.username} lives in{" "}
+//                     {ownerData.country_of_residence}
+//                   </p>
+//                   <p>
+//                     <strong>Current occupation/industry:</strong>{" "}
+//                     {projectData.current_occupation_or_industry}
+//                   </p>
+//                   <p>
+//                     <strong>Desired occupation/industry:</strong>{" "}
+//                     {projectData.desired_occupation_or_industry}
+//                   </p>
+//                 </div>
+//               </div>
+//             </div>
+
+//             <h2>Pledge to this Campaign</h2>
+//             <div className="project-page-pledge-container">
+//               <ul className="pledge-list">
+//                 {projectData.pledges &&
+//                   projectData.pledges.map((pledgeData, key) => {
+//                     return (
+//                       <li key={key}>
+//                         <p className="pledge-box pledge-sb">
+//                           <strong>${pledgeData.amount}</strong> from{" "}
+//                           {pledgeData.supporter
+//                             ? pledgeData.supporter
+//                             : "Anonymous"}{" "}
+//                           who said
+//                           <i>"{pledgeData.comment}"</i>
+//                         </p>
+//                       </li>
+//                     );
+//                   })}
+//               </ul>
+//               <PledgeForm projectId={projectData.id} />
+//             </div>
+//           </div>
+
+//           {/* COMMENTS - COMMENTS ARE NOT RENDERING?*/}
+//           <h2>Comment on this Campaign</h2>
+//           <div className="project-page-comments-container">
+//             <ul className="comment-list">
+//               {commentData &&
+//                 commentData.map((data, key) => {
+//                   return (
+//                     <li key={key}>
+//                       <p className="comment-box comment-sb">
+//                         {data.commentator} says ... {data.title}
+//                       </p>
+//                     </li>
+//                   );
+//                 })}
+//             </ul>
+//             <CommentForm projectId={projectData.id} />
+//           </div>
+//         </div>
+//       </body>
+//     </>
+//   );
+// }
+
+// export default ProjectPage;
+
+// Attempt 3
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
@@ -156,30 +337,6 @@ function ProjectPage() {
   // Logged in check
   const token = window.localStorage.getItem("token");
 
-  // Effects
-  // THIS WORKS BUT I CANNOT REPLICATE TO FETCH OWNER DATA FOR OWNER PROFILE SO MUST USE ALL THE OLD CODE
-  // useEffect(() => {
-  //   fetch(`${import.meta.env.VITE_API_URL}projects/${id}`)
-  //     .then((results) => {
-  //       return results.json();
-  //     })
-  //     .then((data) => {
-  //       setProjectData(data);
-  //       setCommentData(data);
-  //     });
-  // }, []);
-
-  // // MY ATTEMPT AT FETCHING OWNER DATA - NOT WORKING
-  // useEffect(() => {
-  //   fetch(`${import.meta.env.VITE_API_URL}users/${data.owner}`)
-  //     .then((results) => {
-  //       return results.json();
-  //     })
-  //     .then((data) => {
-  //       setOwnerData(data);
-  //     });
-  // }, []);
-
   // Old code snippet using async
   useEffect(() => {
     const fetchProject = async () => {
@@ -195,11 +352,11 @@ function ProjectPage() {
         const ownerData = await ownerRes.json();
 
         const commentRes = await fetch(
-          `${import.meta.env.VITE_API_URL}comments/${id}`
+          `${import.meta.env.VITE_API_URL}comments/`
         );
         const commentData = await commentRes.json();
 
-        console.log(data);
+        console.log(commentData);
 
         setProjectData(data);
         setOwnerData(ownerData);
@@ -288,7 +445,6 @@ function ProjectPage() {
               </div>
             </div>
 
-            {/* PLEDGES - CAN'T MAKE PLEDGES RIGHT NOW WITH THIS CODE*/}
             <h2>Pledge to this Campaign</h2>
             <div className="project-page-pledge-container">
               <ul className="pledge-list">
@@ -320,14 +476,14 @@ function ProjectPage() {
                 commentData.comments.map((commentData, key) => {
                   return (
                     <li key={key}>
-                      <p classname="comment-box comment-sb">
+                      <p className="comment-box comment-sb">
                         {commentData.commentator} says ... {commentData.title}
                       </p>
                     </li>
                   );
                 })}
             </ul>
-            <CommentForm commentId={commentData.id} />
+            <CommentForm />
           </div>
         </div>
       </body>
@@ -342,5 +498,3 @@ export default ProjectPage;
 // Issues
 // Currently no comments are able to be posted.
 // Comment title field in comment model was removed in backend but still exists in front-end. Unsure if this is the reason it is not working?
-
-// Pledges are not working anymore. Field in back end was changed from 'pledge_amount' to 'amount'. Stopped working after this change was deployed.
