@@ -300,6 +300,28 @@ form div button:hover {
   row-gap: 10px;
 }
 
+/* ---------- Homepage ---------------- */
+.homepage-intro-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-items: center;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.homepage-projects-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-items: center;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin-bottom: 40px;
+}
+
 /* ---------- Projects-Page  ----------- */
 .project-page-project-container {
   display: flex;
